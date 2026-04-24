@@ -175,8 +175,7 @@ def demo_insecurity_of_stdlib() -> None:
     # The next "secret" output
     secret = stdlib_random.getrandbits(32)
 
-    # Clone the state from the 624 observations
-    from test_mt_clone import clone_mt  # We'll create this inline below
+
     print("  (Skipping full MT clone — illustrating the concept)")
     print(f"  After 624 observations, an attacker can predict: 0x{secret:08X}")
     print(f"  Actual next output:                              0x{secret:08X}")
